@@ -1,0 +1,21 @@
+Name: user-api
+Host: 0.0.0.0
+Port: 8887
+
+Auth:
+  AccessSecret: "12345678"
+  AccessExpire: 60
+
+Mysql:
+  DataSource: "root:@tcp(127.0.0.1)/gozero?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai"
+CacheRedis:
+  - Host: "127.0.0.1:6379"
+    Pass:
+    Type: node
+
+UserRpc:
+  Etcd:
+    Hosts:
+      - 127.0.0.1:2379
+    Key: user.rpc
+
